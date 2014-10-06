@@ -1,14 +1,13 @@
 steal(
-  '../../javascriptmvc/can/can.js',
-  '../../javascriptmvc/can/view/mustache/mustache.js',
+  'can',
   function(can) {
     var ViewModel = can.Map.extend({});
 
     console.log('elo');
-    return Component.extend({
+    return can.Component.extend({
       tag: 'home-app',
-      template: can.view.mustache('./home/home.stache'),
-      scope: ViewModel,
+      template: can.view('./site/home/home.mustache'),
+      scope: ViewModel
     });
   }
 );

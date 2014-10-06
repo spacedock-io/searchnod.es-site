@@ -1,8 +1,7 @@
 steal(
-	//'../javascriptmvc/can/can.js',
-	'../javascriptmvc/can/view/mustache/mustache.js',
+	'can',
 	'./home/home.js',
 	function(can, home) {
-		$('#app').html(can.view.mustache('<home-app></home-app>'));
+		jQuery('#app').html(can.view.mustache('<home-app></home-app>'));
 	}
 );

@@ -1,7 +1,11 @@
 steal(
 	'can',
 	'./home/home.js',
-	function(can, home) {
-		jQuery('#app').html(can.view.mustache('<home-app></home-app>'));
+	'./snippet-list/snippet-list.js',
+	'./fixtures/fixtures.js',
+	function(can, home, snippetList) {
+		can.$('#app').html(can.view('./site/snippet-list/snippet-list.mustache', {
+			snippets: new snippetList.List({})
+		}));
 	}
 );

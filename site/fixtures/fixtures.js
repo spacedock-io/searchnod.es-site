@@ -1,8 +1,8 @@
 steal(
-  'can',
-  function(can) {
-    return can.fixture({
-      "POST /services/players":  function(request, response) {
+  'can/util/fixture',
+  function(fixture) {
+    return fixture({
+      "POST /search":  function(request, response) {
         response([
           {
             "package": "groovebasin",

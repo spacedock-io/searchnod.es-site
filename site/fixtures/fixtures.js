@@ -1,0 +1,6 @@
+steal(
+  'can',
+  function(can) {
+    
+  }
+);

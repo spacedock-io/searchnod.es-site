@@ -32,7 +32,7 @@ emoji=1
 #branchincommit=1
 
 # Skip the prefix in the commit message, default: no
-#noprefix=1
+noprefix=1
 
 # Open github compare page in the browser after succesfull push
 opencompare=0

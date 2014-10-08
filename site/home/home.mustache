@@ -1,3 +1,7 @@
-<img src="img/logo.png"/>
+<div class="container">
+  <img src="img/logo.png" class="logo"/>
 
-  <snippet-list></snippet-list>
+  {{#if snippets}}
+    <snippet-list></snippet-list>
+  {{/if}}
+</div>

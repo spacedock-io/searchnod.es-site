@@ -3,7 +3,6 @@ steal(
 	'./home/home.js',
 	'./snippet-list/snippet-list.js',
 	'./fixtures.js',
-	'./routes.js',
 	function(can, home, snippetList) {
 
 		var snippets = new can.Map({

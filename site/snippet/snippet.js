@@ -3,7 +3,7 @@ steal(
   function(can) {
 
     var SnippetModel = can.Model.extend({
-      findAll: "POST /search?q={searchTerm}"
+      findAll: "POST /search}"
     }, {});
 
     return can.Component.extend({

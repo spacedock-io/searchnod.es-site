@@ -1,0 +1,20 @@
+{
+  "name": "npmco.de",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mmalecki/nodeco.de-site",
+  "authors": [
+    "npmco.de <hello@npmco.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}

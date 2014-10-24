@@ -1,0 +1,9 @@
+{
+  "name": "npmco.de",
+  "version": "0.0.0",
+  "author": "npmco.de <hello@npmco.de>",
+  "scripts": {
+    "server": "http-server"
+  },
+  "private": true
+}

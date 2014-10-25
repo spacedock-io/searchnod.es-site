@@ -1,6 +1,8 @@
 <div class="container">
   <img src="img/logo.png" class="logo"/><br/>
-  <input type="text" class="search-input" can-click={elo} placeholder="Search Code"/>
+  {{^snippets}}
+    <input type="text" class="search-input" placeholder="Search Code"/>
+  {{/snippets}}
   {{#if snippets}}
     <snippet-list></snippet-list>
   {{/if}}

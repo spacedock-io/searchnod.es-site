@@ -1,6 +1,9 @@
 body {
   background-color: #F4F4F2;
   text-align: center;
+  border-top: 6px solid #CC3D33;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -10,5 +13,14 @@ body {
 }
 
 .logo {
-  width: 300px;
+  width: 100%;
+}
+
+.search-input {
+  margin-top: 50px;
+  height: 32px;
+  width: 260px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #DDD;
 }

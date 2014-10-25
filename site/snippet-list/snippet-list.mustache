@@ -1,9 +1,15 @@
-{{#each snippets}}
-  <div style="width:300px;border:2px #000 solid;">
-    {{#each content}}
-    <pre>
-      {{.}}
-    </pre>
-    {{/each}}
-  </div>
-{{/each}}
+<div class="snippet-container">
+  {{#each snippets}}
+    <div class="package-description">
+      <b>
+        <a href="https://www.npmjs.org/package/{{package}}">{{package}}</a>
+      </b> by
+      <a href="https://www.npmjs.org/~{{author}}">{{author}}</a><br/>
+      <i>{{filename}}</i>
+    </div>
+      {{#each content}}
+      <pre><code data-language="javascript">{{.}}</code></pre>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

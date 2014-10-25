@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "steal": "~0.3.0",
-    "CanJS": "https://github.com/bitovi/canjs.git#minor"
+    "CanJS": "https://github.com/bitovi/canjs.git#minor",
+    "rainbow": "~1.1.9"
   }
 }

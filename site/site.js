@@ -6,7 +6,11 @@ steal(
 	function(can, home, snippetList) {
 
 		var snippets = new can.Map({
-			snippets: []
+			snippets: [],
+			performSearch: function(a) {
+				snippets.attr('snippets', new snippetList.List({}));
+				return false;
+			}
 		});
 
 		var view = can.view.mustache('<home-app></home-app>')(snippets);

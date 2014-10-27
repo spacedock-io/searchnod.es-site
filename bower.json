@@ -1,7 +1,7 @@
 {
   "name": "npmco.de",
   "version": "0.0.0",
-  "homepage": "https://github.com/mmalecki/nodeco.de-site",
+  "homepage": "git@github.com:spacedock-io/npmco.de-site.git",
   "authors": [
     "npmco.de <hello@npmco.de>"
   ],

@@ -37,16 +37,11 @@ function(){
 
     this.setRegex = function(input)
     {
-      console.log(1, input);
-      input = input.replace(/^[^\w]+|[^\w]+$/g, "");
-      console.log(2, input);
-      input = input.replace(/[^\w'-]+/g, "|");
-      console.log(3, input);
 
-      var re = input;//"(" + input + ")";
+      input = input.replace(/^[^\w]+|[^\w]+$/g, "").replace(/[^\w'-]+/g, "|");
+      var re = "(" + input + ")";
       if(!this.openLeft) re = "\\b" + re;
       if(!this.openRight) re = re + "\\b";
-      console.log('re', re);
       matchRegex = new RegExp(re, "i");
     };
 

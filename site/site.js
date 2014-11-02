@@ -8,7 +8,9 @@ steal(
 		var snippets = new can.Map({
 			snippets: [],
 			performSearch: function(a) {
-				snippets.attr('snippets', new snippetList.List({}));
+				console.log(a);
+				var searchTerm = $('.search-input').val();
+				snippets.attr('snippets', new snippetList.List({ searchTerm: searchTerm }));
 				return false;
 			}
 		});

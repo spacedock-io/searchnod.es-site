@@ -13,12 +13,13 @@ a:link:hover, a:visited:hover, a:active:hover {
 a:link, a:visited, a:active {
     text-decoration: none;
     color: #CC3D33;
+    font-weight: bold;
 }
 
 .container {
   width: 800px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .logo {

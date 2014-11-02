@@ -7,9 +7,11 @@
       <a href="https://www.npmjs.org/~{{author}}">{{author}}</a><br/>
       <i>{{filename}}</i>
     </div>
-      {{#each content}}
-      <pre><code data-language="javascript">{{.}}</code></pre>
-      {{/each}}
+      <div class="code-container">
+        {{#each content}}
+        <pre><code data-language="javascript">{{.}}</code></pre>
+        {{/each}}
+      </div>
     </div>
   {{/each}}
 </div>

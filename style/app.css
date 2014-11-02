@@ -47,10 +47,11 @@ a:link, a:visited, a:active {
 }
 
 .package-description {
+  margin-top: 20px;
   margin-bottom: 0;
   font-size: 14px;
 }
 
 pre {
-  margin-top: 0;
+  margin: 0 !important;
 }

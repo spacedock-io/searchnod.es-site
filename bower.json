@@ -1,9 +1,9 @@
 {
-  "name": "npmco.de",
+  "name": "searchnod.es",
   "version": "0.0.0",
-  "homepage": "git@github.com:spacedock-io/npmco.de-site.git",
+  "homepage": "git@github.com:spacedock-io/searchnod.es-site.git",
   "authors": [
-    "npmco.de <hello@npmco.de>"
+    "searchnod.es <hello@searchnod.es>"
   ],
   "license": "MIT",
   "private": true,

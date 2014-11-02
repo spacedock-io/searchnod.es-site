@@ -1,7 +1,7 @@
 {
-  "name": "npmco.de",
+  "name": "searchnod.es",
   "version": "0.0.0",
-  "author": "npmco.de <hello@npmco.de>",
+  "author": "searchnod.es <hello@searchnod.es>",
   "scripts": {
     "server": "http-server"
   },

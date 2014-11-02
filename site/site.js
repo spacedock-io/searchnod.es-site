@@ -5,24 +5,37 @@ steal(
 	//'./fixtures.js',
 	function(can, home, snippetList) {
 
-		var snippets = new can.Map({
+		var snippetBox = new can.Map({
 			snippets: [],
 			performSearch: function(a) {
-				snippets.attr('snippets', []);
+				$('.no-results').addClass('hidden');
+				snippetBox.attr('snippets', []);
 				$('.spinner').removeClass('hidden');
 				var searchInput = $('.search-input');
 				searchInput.blur();
 				var searchTerm = $('.search-input').val();
-				setTimeout(function(){
-					snippets.attr('snippets', new snippetList.List({ searchTerm: searchTerm }));
+				setTimeout(function() {
+					snippetList.findAll({ searchTerm: searchTerm }).then(
+						function(data) {
+							snippetBox.attr('snippets', data);
+						},
+						function() {
+							noResults();
+						}
+					);
 				}, 1000);
 				return false;
 			}
 		});
 
+		var noResults = function(){
+			$('.no-results').removeClass('hidden');
+			$('.spinner').addClass('hidden');
+		};
+
 		var colorTimeout;
-		snippets.bind('change', function() {
-			if (snippets.snippets.length > 0) {
+		snippetBox.bind('change', function() {
+			if (snippetBox.snippets.length > 0) {
 				if (colorTimeout) {
 					clearTimeout(colorTimeout);
 					colorTimeout = undefined;
@@ -34,7 +47,7 @@ steal(
 			}
 		});
 
-		var view = can.view.mustache('<home-app></home-app>')(snippets);
+		var view = can.view.mustache('<home-app></home-app>')(snippetBox);
 		can.$('#app').html(view);
 
 	}

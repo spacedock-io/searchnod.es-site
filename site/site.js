@@ -2,9 +2,10 @@ steal(
 	'can',
 	'./home/home.js',
 	'./snippet-list/snippet-list.js',
+	'./hilitor.js',
 	'./router.js',
 	//'./fixtures.js',
-	function(can, home, snippetList) {
+	function(can, home, snippetList, Hilitor) {
 		var $ = can.$;
 		var snippetBox = new can.Map({
 			snippets: [],
@@ -42,15 +43,18 @@ steal(
 					clearTimeout(colorTimeout);
 					colorTimeout = undefined;
 				}
-				colorTimeout = setTimeout(function() {
-					Rainbow.color();
+
+				Rainbow.color();
+
+				setTimeout(function(){
+					var hilitor = new Hilitor('code');
+					hilitor.apply($('.search-input').val());
 					$('.spinner').addClass('hidden');
 				}, 500);
 			}
 		});
 
 		$(document).on('perform-search', function(ev, data) {
-			console.log(data);
 			$('.search-input').val(data);
 			snippetBox.attr('performSearch')();
 		});

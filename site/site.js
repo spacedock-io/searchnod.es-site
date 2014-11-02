@@ -8,19 +8,30 @@ steal(
 		var snippets = new can.Map({
 			snippets: [],
 			performSearch: function(a) {
+				snippets.attr('snippets', []);
+				$('.spinner').removeClass('hidden');
+				var searchInput = $('.search-input');
+				searchInput.blur();
 				var searchTerm = $('.search-input').val();
-				snippets.attr('snippets', new snippetList.List({ searchTerm: searchTerm }));
+				setTimeout(function(){
+					snippets.attr('snippets', new snippetList.List({ searchTerm: searchTerm }));
+				}, 1000);
 				return false;
 			}
 		});
 
 		var colorTimeout;
 		snippets.bind('change', function() {
-			if (colorTimeout) {
-				clearTimeout(colorTimeout);
-				colorTimeout = undefined;
+			if (snippets.snippets.length > 0) {
+				if (colorTimeout) {
+					clearTimeout(colorTimeout);
+					colorTimeout = undefined;
+				}
+				colorTimeout = setTimeout(function() {
+					Rainbow.color();
+					$('.spinner').addClass('hidden');
+				}, 500);
 			}
-			colorTimeout = setTimeout(Rainbow.color, 500);
 		});
 
 		var view = can.view.mustache('<home-app></home-app>')(snippets);

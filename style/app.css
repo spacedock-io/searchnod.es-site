@@ -56,3 +56,11 @@ a:link, a:visited, a:active {
 pre {
   margin: 0 !important;
 }
+
+.spinner {
+  margin: 30px;
+}
+
+.hidden {
+  display: none;
+}

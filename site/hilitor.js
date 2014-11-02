@@ -7,7 +7,7 @@ function(){
     var targetNodes = document.querySelectorAll(selector) || document.body;
     targetNodes = Array.prototype.slice.call(targetNodes);
     var hiliteTag = tag || "EM";
-    var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
+    var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM)$");
     var colors = ["#ff6", "#a0ffff", "#9f9", "#f99", "#f6f"];
     var wordColor = [];
     var colorIdx = 0;
@@ -37,10 +37,16 @@ function(){
 
     this.setRegex = function(input)
     {
-      input = input.replace(/^[^\w]+|[^\w]+$/g, "").replace(/[^\w'-]+/g, "|");
-      var re = "(" + input + ")";
+      console.log(1, input);
+      input = input.replace(/^[^\w]+|[^\w]+$/g, "");
+      console.log(2, input);
+      input = input.replace(/[^\w'-]+/g, "|");
+      console.log(3, input);
+
+      var re = input;//"(" + input + ")";
       if(!this.openLeft) re = "\\b" + re;
       if(!this.openRight) re = re + "\\b";
+      console.log('re', re);
       matchRegex = new RegExp(re, "i");
     };
 
@@ -71,9 +77,10 @@ function(){
 
           var match = document.createElement(hiliteTag);
           match.appendChild(document.createTextNode(regs[0]));
-          match.style.backgroundColor = wordColor[regs[0].toLowerCase()];
-          match.style.fontStyle = "inherit";
-          match.style.color = "#000";
+          // match.style.backgroundColor = wordColor[regs[0].toLowerCase()];
+          // match.style.fontStyle = "inherit";
+          // match.style.color = "#000";
+          match.className = "hilitor-highlight";
 
           var after = node.splitText(regs.index);
           after.nodeValue = after.nodeValue.substring(regs[0].length);

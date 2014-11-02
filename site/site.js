@@ -16,17 +16,16 @@ steal(
 				var searchInput = $('.search-input');
 				searchInput.blur();
 				var searchTerm = $('.search-input').val();
-				setTimeout(function() {
-					can.route.attr({ searchTerm: searchTerm });
-					snippetList.findAll({ searchTerm: searchTerm }).then(
-						function(data) {
-							snippetBox.attr('snippets', data);
-						},
-						function() {
-							noResults();
-						}
-					);
-				}, 1000);
+
+				can.route.attr({ searchTerm: searchTerm });
+				snippetList.findAll({ searchTerm: searchTerm }).then(
+					function(data) {
+						snippetBox.attr('snippets', data);
+					},
+					function() {
+						noResults();
+					}
+				);
 				return false;
 			}
 		});

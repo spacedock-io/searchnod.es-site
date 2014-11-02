@@ -71,6 +71,15 @@ pre {
   margin: 30px;
 }
 
+.hilitor-highlight {
+  background-color: rgba(255, 255, 140, 0.5);
+  padding: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-style: normal;
+  color: #333;
+}
+
 .hidden {
   display: none;
 }

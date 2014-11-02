@@ -44,13 +44,12 @@ steal(
 					colorTimeout = undefined;
 				}
 
-				Rainbow.color();
-
-				setTimeout(function(){
+				Rainbow.color(document, function(){
 					var hilitor = new Hilitor('code');
+					hilitor.setMatchType('open');
 					hilitor.apply($('.search-input').val());
 					$('.spinner').addClass('hidden');
-				}, 500);
+				});
 			}
 		});
 

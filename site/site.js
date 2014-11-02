@@ -54,8 +54,10 @@ steal(
 		});
 
 		$(document).on('perform-search', function(ev, data) {
-			$('.search-input').val(data);
-			snippetBox.attr('performSearch')();
+			if ($('.search-input').val() !== data) {
+				$('.search-input').val(data);
+				snippetBox.attr('performSearch')();
+			}
 		});
 
 		$().ready(function(){

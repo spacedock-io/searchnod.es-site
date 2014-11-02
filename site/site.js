@@ -2,9 +2,10 @@ steal(
 	'can',
 	'./home/home.js',
 	'./snippet-list/snippet-list.js',
+	'./router.js',
 	//'./fixtures.js',
 	function(can, home, snippetList) {
-
+		var $ = can.$;
 		var snippetBox = new can.Map({
 			snippets: [],
 			performSearch: function(a) {
@@ -15,6 +16,7 @@ steal(
 				searchInput.blur();
 				var searchTerm = $('.search-input').val();
 				setTimeout(function() {
+					can.route.attr({ searchTerm: searchTerm });
 					snippetList.findAll({ searchTerm: searchTerm }).then(
 						function(data) {
 							snippetBox.attr('snippets', data);
@@ -47,8 +49,16 @@ steal(
 			}
 		});
 
-		var view = can.view.mustache('<home-app></home-app>')(snippetBox);
-		can.$('#app').html(view);
+		$(document).on('perform-search', function(ev, data) {
+			console.log(data);
+			$('.search-input').val(data);
+			snippetBox.attr('performSearch')();
+		});
 
+		$().ready(function(){
+			var view = can.view.mustache('<home-app></home-app>')(snippetBox);
+			can.$('#app').html(view);
+			can.route.ready();
+		});
 	}
 );

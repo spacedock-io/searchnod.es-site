@@ -12,9 +12,9 @@ steal(
 		var view = can.view('./site/home/home.mustache', snippets);
 		can.$('#app').html(view);
 
-		// setTimeout(function() {
-		// 	console.log(snippets);
-		// 	snippets.attr('snippets', new snippetList.List({}));
-		// }, 1000);
+		setTimeout(function() {
+			console.log(snippets);
+			snippets.attr('snippets', new snippetList.List({}));
+		}, 1000);
 	}
 );

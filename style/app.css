@@ -1,6 +1,18 @@
 body {
   background-color: #F4F4F2;
   text-align: center;
+  border-top: 6px solid #CC3D33;
+  margin: 0;
+  padding: 0;
+}
+
+a:link:hover, a:visited:hover, a:active:hover {
+    text-decoration: underline;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #CC3D33;
 }
 
 .container {
@@ -10,5 +22,22 @@ body {
 }
 
 .logo {
-  width: 300px;
+  width: 100%;
+}
+
+.search-input {
+  margin-top: 50px;
+  height: 32px;
+  width: 260px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #DDD;
+}
+
+.footer {
+    position: absolute;
+    font-size: 12px;
+    right: 0px;
+    padding: 1em;
+    bottom: 5px;
 }

@@ -1,7 +1,13 @@
 <div class="container">
-  <img src="img/logo.png" class="logo"/>
-
+  <img src="img/logo.png" class="logo"/><br/>
+  {{^snippets}}
+    <input type="text" class="search-input" placeholder="Search Code"/>
+  {{/snippets}}
   {{#if snippets}}
     <snippet-list></snippet-list>
   {{/if}}
+</div>
+
+<div class="footer">
+  Created by <a href="https://github.com/spacedock-io">Spacedock</a> with <a href="http://canjs.com/">CanJS</a>
 </div>

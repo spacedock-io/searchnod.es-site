@@ -1,7 +1,7 @@
 {
   "name": "npmco.de",
   "version": "0.0.0",
-  "homepage": "https://github.com/mmalecki/nodeco.de-site",
+  "homepage": "git@github.com:spacedock-io/npmco.de-site.git",
   "authors": [
     "npmco.de <hello@npmco.de>"
   ],
@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "steal": "~0.3.0",
+    "CanJS": "https://github.com/bitovi/canjs.git#minor"
   }
 }

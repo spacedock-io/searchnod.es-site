@@ -3,3 +3,6 @@ node_modules
 .DS_Store
 .*.sw[op]
 public/components
+
+javascriptmvc
+site/components

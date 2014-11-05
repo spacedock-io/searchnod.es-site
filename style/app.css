@@ -1,0 +1,14 @@
+body {
+  background-color: #F4F4F2;
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.logo {
+  width: 300px;
+}

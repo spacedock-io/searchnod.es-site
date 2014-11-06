@@ -9,6 +9,6 @@ $ bower install
 build:
 ```
 $ sudo npm install
-$ node build.js
+$ npm run build
 $ open index.production.html
 ```

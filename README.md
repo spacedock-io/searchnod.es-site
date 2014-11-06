@@ -1,5 +1,5 @@
 # searchnod.es #
-built proudly with CanJS & StealJS
+built proudly with [CanJS](http://canjs.com/index.html) & [StealJS](http://stealjs.com)
 
 run:
 ```

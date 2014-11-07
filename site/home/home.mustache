@@ -1,7 +1,9 @@
 <div class="container">
   <img src="img/logo.png" class="logo"/><br/>
   {{^snippets}}
-    <input type="text" class="search-input" placeholder="Search Code"/>
+    <form can-submit="performSearch">
+      <input type="text" class="search-input" placeholder="Search Code"/>
+    </form>
   {{/snippets}}
   {{#if snippets}}
     <snippet-list></snippet-list>

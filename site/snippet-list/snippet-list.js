@@ -1,8 +1,6 @@
 steal(
   'can',
   function(can) {
-    console.log('snip1111yqwet');
-
     var Snippets = can.Model.extend({
       findAll: "POST /search"
     }, {});

@@ -13,6 +13,15 @@ steal(
 			}
 		});
 
+		var colorTimeout;
+		snippets.bind('change', function() {
+			if (colorTimeout) {
+				clearTimeout(colorTimeout);
+				colorTimeout = undefined;
+			}
+			colorTimeout = setTimeout(Rainbow.color, 500);
+		});
+
 		var view = can.view.mustache('<home-app></home-app>')(snippets);
 		can.$('#app').html(view);
 

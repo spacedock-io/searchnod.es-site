@@ -34,10 +34,23 @@ a:link, a:visited, a:active {
   border: 1px solid #DDD;
 }
 
+.snippet-container {
+  margin-top: 0px;
+  text-align: left;
+}
+
 .footer {
-    position: absolute;
+    position: relative;
     font-size: 12px;
-    right: 0px;
     padding: 1em;
-    bottom: 5px;
+    margin-top: 15px;
+}
+
+.package-description {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+pre {
+  margin-top: 0;
 }

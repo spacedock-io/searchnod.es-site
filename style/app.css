@@ -13,12 +13,13 @@ a:link:hover, a:visited:hover, a:active:hover {
 a:link, a:visited, a:active {
     text-decoration: none;
     color: #CC3D33;
+    font-weight: bold;
 }
 
 .container {
   width: 800px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .logo {
@@ -47,10 +48,38 @@ a:link, a:visited, a:active {
 }
 
 .package-description {
+  margin-top: 20px;
   margin-bottom: 0;
   font-size: 14px;
 }
 
 pre {
-  margin-top: 0;
+  margin: 0 !important;
+}
+
+.spinner {
+  margin: 30px;
+}
+
+.no-results {
+  margin-top: 30px !important;
+}
+
+.no-results img {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+}
+
+.hilitor-highlight {
+  background-color: rgba(255, 255, 140, 0.5);
+  padding: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-style: normal;
+  color: #333;
+}
+
+.hidden {
+  display: none;
 }

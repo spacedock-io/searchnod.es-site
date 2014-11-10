@@ -1,9 +1,12 @@
 {
-  "name": "npmco.de",
+  "name": "searchnod.es",
   "version": "0.0.0",
-  "author": "npmco.de <hello@npmco.de>",
+  "author": "searchnod.es <hello@searchnod.es>",
   "scripts": {
     "server": "http-server"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "steal-tools": "^0.5.0"
+  }
 }

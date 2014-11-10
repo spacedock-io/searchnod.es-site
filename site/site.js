@@ -2,32 +2,67 @@ steal(
 	'can',
 	'./home/home.js',
 	'./snippet-list/snippet-list.js',
-	'./fixtures.js',
-	function(can, home, snippetList) {
-
-		var snippets = new can.Map({
+	'./hilitor.js',
+	'./router.js',
+	//'./fixtures.js',
+	function(can, home, snippetList, Hilitor) {
+		var $ = can.$;
+		var snippetBox = new can.Map({
 			snippets: [],
 			performSearch: function(a) {
-				snippets.attr('snippets', new snippetList.List({}));
+				$('.no-results').addClass('hidden');
+				snippetBox.attr('snippets', []);
+				$('.spinner').removeClass('hidden');
+				var searchInput = $('.search-input');
+				searchInput.blur();
+				var searchTerm = $('.search-input').val();
+
+				can.route.attr({ searchTerm: searchTerm });
+				snippetList.findAll({ searchTerm: searchTerm }).then(
+					function(data) {
+						snippetBox.attr('snippets', data);
+					},
+					function() {
+						noResults();
+					}
+				);
 				return false;
 			}
 		});
 
+		var noResults = function(){
+			$('.no-results').removeClass('hidden');
+			$('.spinner').addClass('hidden');
+		};
+
 		var colorTimeout;
-		snippets.bind('change', function() {
-			if (colorTimeout) {
-				clearTimeout(colorTimeout);
-				colorTimeout = undefined;
+		snippetBox.bind('change', function() {
+			if (snippetBox.snippets.length > 0) {
+				if (colorTimeout) {
+					clearTimeout(colorTimeout);
+					colorTimeout = undefined;
+				}
+
+				Rainbow.color(document, function(){
+					var hilitor = new Hilitor('code');
+					hilitor.setMatchType('open');
+					hilitor.apply($('.search-input').val());
+					$('.spinner').addClass('hidden');
+				});
 			}
-			colorTimeout = setTimeout(Rainbow.color, 500);
 		});
 
-		var view = can.view.mustache('<home-app></home-app>')(snippets);
-		can.$('#app').html(view);
+		$(document).on('perform-search', function(ev, data) {
+			if ($('.search-input').val() !== data) {
+				$('.search-input').val(data);
+				snippetBox.attr('performSearch')();
+			}
+		});
 
-		// setTimeout(function() {
-		// 	console.log(snippets);
-		// 	snippets.attr('snippets', new snippetList.List({}));
-		// }, 1000);
+		$().ready(function(){
+			var view = can.view.mustache('<home-app></home-app>')(snippetBox);
+			can.$('#app').html(view);
+			can.route.ready();
+		});
 	}
 );

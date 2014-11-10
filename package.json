@@ -1,9 +1,9 @@
 {
   "name": "searchnod.es",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "searchnod.es <hello@searchnod.es>",
   "scripts": {
-    "server": "http-server"
+    "build": "node build.js"
   },
   "private": true,
   "devDependencies": {

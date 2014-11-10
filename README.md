@@ -1,4 +1,4 @@
-# searchnod.es #
+![img/logo.png](img/logo.png)
 built proudly with [CanJS](http://canjs.com/index.html) & [StealJS](http://stealjs.com)
 
 run:

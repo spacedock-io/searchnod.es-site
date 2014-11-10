@@ -2,7 +2,7 @@ steal(
   'can',
   function(can) {
     var Snippets = can.Model.extend({
-      findAll: "POST http://localhost:8009/search?q={searchTerm}"
+      findAll: "POST " + steal.config('apiLocation') + "/search?q={searchTerm}"
     }, {});
 
     can.Component.extend({

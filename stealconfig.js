@@ -13,5 +13,14 @@ steal.config({
       exports: "jQuery",
       format: "global"
     }
-  }
+  },
+
+  apiLocation: "http://localhost:8009",
+  fixtures: false
 });
+
+if(steal.config('fixtures')) {
+  System.meta['site/site'] = {
+    deps: ['site/fixtures']
+  };
+}

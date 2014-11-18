@@ -15,6 +15,9 @@ steal.config({
     }
   },
 
+  ext: {
+    "mustache": "can/view/mustache/system"  
+  },
   apiLocation: "http://localhost:8009",
   fixtures: false
 });

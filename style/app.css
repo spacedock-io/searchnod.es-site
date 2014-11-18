@@ -17,7 +17,8 @@ a:link, a:visited, a:active {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
+  padding: 10px;
   margin: auto;
   margin-top: 70px;
 }
@@ -29,7 +30,8 @@ a:link, a:visited, a:active {
 .search-input {
   margin-top: 50px;
   height: 32px;
-  width: 260px;
+  width: 45%;
+  min-width: 250px;
   font-size: 18px;
   padding: 5px;
   border: 1px solid #DDD;

@@ -1,9 +1,10 @@
 steal(
   'can',
-  function(can) {
+  './home.mustache!',
+  function(can, hTemplate) {
     return can.Component.extend({
       tag: 'home-app',
-      template: can.view('./site/home/home.mustache'),
+      template: hTemplate,
       scope: {
       },
       events: {

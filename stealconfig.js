@@ -16,7 +16,7 @@ steal.config({
   },
 
   ext: {
-    "mustache": "can/view/mustache/system"  
+    "mustache": "can/view/mustache/system"
   },
   apiLocation: "http://localhost:8009",
   fixtures: false
@@ -27,3 +27,5 @@ if(steal.config('fixtures')) {
     deps: ['site/fixtures']
   };
 }
+
+System.buildConfig = {map: {"can/util/util" : "can/util/domless/domless"}};

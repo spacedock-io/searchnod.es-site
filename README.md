@@ -1,4 +1,4 @@
-![img/logo.png](img/logo.png)
+![img/logo.png](img/logo-green.png)
 built proudly with [CanJS](http://canjs.com/index.html) & [StealJS](http://stealjs.com)
 
 run:

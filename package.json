@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "searchnod.es <hello@searchnod.es>",
   "scripts": {
-    "build": "node build.js"
+    "build": "./build.sh"
   },
   "private": true,
   "devDependencies": {

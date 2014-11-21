@@ -15,7 +15,7 @@ steal(
 				$('.spinner').removeClass('hidden');
 				var searchInput = $('.search-input');
 				searchInput.blur();
-				var searchTerm = $('.search-input').val();
+				var searchTerm = searchInput.val();
 
 				can.route.attr({ searchTerm: searchTerm });
 				snippetList.findAll({ searchTerm: searchTerm }).then(

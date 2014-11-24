@@ -24,6 +24,7 @@ steal(
 					size: 10
 				}).then(
 					function(data) {
+						console.log(data.total);
 						snippetBox.attr('snippets', data);
 					},
 					function() {

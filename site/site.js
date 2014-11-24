@@ -18,9 +18,11 @@ steal(
 				var searchTerm = searchInput.val();
 
 				can.route.attr({ searchTerm: searchTerm });
+				var page = can.route.attr('page');
+
 				snippetList.findAll({
 					searchTerm: searchTerm,
-					from: 0,
+					from: page || 0	,
 					size: 10
 				}).then(
 					function(data) {
@@ -40,6 +42,7 @@ steal(
 			$('.spinner').addClass('hidden');
 		};
 
+		// XXX: okurwa, coto?
 		var colorTimeout;
 		snippetBox.bind('change', function() {
 			if (snippetBox.snippets.length > 0) {
@@ -58,8 +61,8 @@ steal(
 		});
 
 		$(document).on('perform-search', function(ev, data) {
-			if ($('.search-input').val() !== data) {
-				$('.search-input').val(data);
+			if ($('.search-input').val() !== data.searchTerm) {
+				$('.search-input').val(data.searchTerm);
 				snippetBox.attr('performSearch')();
 			}
 		});

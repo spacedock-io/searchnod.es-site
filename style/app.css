@@ -84,7 +84,13 @@ small.result-header span{
   font-weight: bold;
 }
 
-.page-button {
+.pages {
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
+.pages .page-button {
   display: inline-block;
   width: 25px;
   height: 25px;

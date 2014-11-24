@@ -65,7 +65,9 @@ pre {
 }
 
 .spinner {
-  margin: 30px;
+  margin: 30px auto 30px auto;
+  display: block;
+  clear: both;
 }
 
 .no-results {

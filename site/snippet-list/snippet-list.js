@@ -3,7 +3,7 @@ steal(
   './snippet-list.mustache!',
   function(can, snTemplate) {
     var Snippets = can.Model.extend({
-      findAll: "POST " + steal.config('apiLocation') + "/search?q={searchTerm}&{searchTerm}&from={from}&size={size}"
+      findAll: "POST " + steal.config('apiLocation') + "/search?q={searchTerm}&from={from}&size={size}"
     }, {});
 
     can.Component.extend({

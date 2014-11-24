@@ -23,6 +23,7 @@ steal.config({
 });
 
 if(steal.config('fixtures')) {
+  console.log("FIXTURES USED");
   System.meta['site/site'] = {
     deps: ['site/fixtures']
   };

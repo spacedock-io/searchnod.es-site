@@ -18,11 +18,16 @@ steal(
 				var searchTerm = searchInput.val();
 
 				can.route.attr({ searchTerm: searchTerm });
-				snippetList.findAll({ searchTerm: searchTerm }).then(
+				snippetList.findAll({
+					searchTerm: searchTerm,
+					from: 0,
+					size: 10
+				}).then(
 					function(data) {
-						snippetBox.attr('snippets', data);
+						console.log(data);
+						snippetBox.attr('snippets', data[1]);
 					},
-					function() {
+					function(data) {
 						noResults();
 					}
 				);

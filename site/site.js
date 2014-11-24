@@ -5,6 +5,8 @@ steal(
 	'./hilitor.js',
 	'./router.js',
 	function(can, home, snippetList, Hilitor) {
+		var resultsPerPage = steal.config('resultsPerPage');
+
 		var $ = can.$;
 		var snippetBox = new can.Map({
 			snippets: [],
@@ -22,7 +24,7 @@ steal(
 				snippetList.findAll({
 					searchTerm: searchTerm,
 					from: page || 0	,
-					size: steal.config('resultsPerPage')
+					size: resultsPerPage
 				}).then(
 					function(data) {
 						snippetBox.attr('snippets', data);

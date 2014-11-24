@@ -29,12 +29,13 @@ a:link, a:visited, a:active {
 
 .search-input {
   margin-top: 50px;
-  height: 32px;
+  height: 50px;
   width: 45%;
   min-width: 250px;
   font-size: 18px;
-  padding: 5px;
+  padding: 5px 5px 5px 12px;
   border: 1px solid #DDD;
+  -moz-box-sizing: border-box;
 }
 
 .snippet-container {

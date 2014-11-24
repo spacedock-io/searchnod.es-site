@@ -22,7 +22,7 @@ steal(
 				snippetList.findAll({
 					searchTerm: searchTerm,
 					from: page || 0	,
-					size: 10
+					size: steal.config('resultsPerPage')
 				}).then(
 					function(data) {
 						snippetBox.attr('snippets', data);

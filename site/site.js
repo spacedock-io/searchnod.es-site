@@ -24,8 +24,7 @@ steal(
 					size: 10
 				}).then(
 					function(data) {
-						console.log(data);
-						snippetBox.attr('snippets', data[1]);
+						snippetBox.attr('snippets', data);
 					},
 					function(data) {
 						noResults();
@@ -48,7 +47,7 @@ steal(
 					colorTimeout = undefined;
 				}
 
-				Rainbow.color(document, function(){
+				Rainbow.color(document, function() {
 					var hilitor = new Hilitor('code');
 					hilitor.setMatchType('open');
 					hilitor.apply($('.search-input').val());

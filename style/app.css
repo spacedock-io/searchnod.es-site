@@ -38,6 +38,10 @@ a:link, a:visited, a:active {
   -moz-box-sizing: border-box;
 }
 
+small.examples {
+  display: block;
+}
+
 .snippet-container {
   margin-top: 0px;
   text-align: left;

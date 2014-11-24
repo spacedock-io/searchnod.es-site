@@ -4,7 +4,6 @@ steal(
 	'./snippet-list/snippet-list.js',
 	'./hilitor.js',
 	'./router.js',
-	//'./fixtures.js',
 	function(can, home, snippetList, Hilitor) {
 		var $ = can.$;
 		var snippetBox = new can.Map({

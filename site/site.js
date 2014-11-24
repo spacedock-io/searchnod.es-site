@@ -26,7 +26,7 @@ steal(
 					function(data) {
 						snippetBox.attr('snippets', data);
 					},
-					function(data) {
+					function() {
 						noResults();
 					}
 				);

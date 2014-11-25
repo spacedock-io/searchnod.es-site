@@ -8,7 +8,10 @@ steal(
       tag: 'page-buttons',
       template: pbTemplate,
       scope: {
-        pages: pages
+        pages: pages,
+        loadPage: function(){
+          console.log('no hej');
+        }
       }
     });
 

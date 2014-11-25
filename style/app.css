@@ -9,13 +9,13 @@ body {
 }
 
 a:link:hover, a:visited:hover, a:active:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #239F46;
-    font-weight: bold;
+  text-decoration: none;
+  color: #239F46;
+  font-weight: bold;
 }
 
 .pages a:visited {

@@ -28,6 +28,9 @@ steal(
 					size: resultsPerPage
 				}).then(
 					function(data) {
+						// XXX: this is very stupid but it's 6AM and after 20th beer
+						// everything that works as expected is good enough
+						// mmalecki is sleeping already hue hue hue.
 						var pages = [];
 						for (var i= 0, l = ~~(data.total/resultsPerPage)+1; i<l; i++) {
 							pages.push(i+1);

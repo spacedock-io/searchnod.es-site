@@ -9,9 +9,6 @@ steal(
       template: pbTemplate,
       scope: {
         pages: pages,
-        loadPage: function() {
-          console.log('no hej');
-        },
         searchTerm: function(){
           return can.route.attr('searchTerm');
         }

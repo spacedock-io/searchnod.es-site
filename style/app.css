@@ -18,6 +18,11 @@ a:link, a:visited, a:active {
     font-weight: bold;
 }
 
+.pages a:visited {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
 .container {
   max-width: 800px;
   padding: 10px;

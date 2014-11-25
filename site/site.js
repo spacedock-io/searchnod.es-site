@@ -36,7 +36,7 @@ steal(
 						// mmalecki is sleeping already hue hue hue.
 						pageButtons.splice(0, pageButtons.length);
 						var pages = [];
-						for (var i= 0, l = ~~(data.total/resultsPerPage)+1; i<l; i++) {
+						for (var i= 0, l = Math.min(10, ~~(data.total/resultsPerPage)+1); i<l; i++) {
 							pages.push(i+1);
 						}
 						pageButtons.attr(pages);

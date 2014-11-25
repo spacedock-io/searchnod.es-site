@@ -12,8 +12,7 @@ steal(
 		var snippetBox = new can.Map({
 			snippets: [],
 			doSearch: function() {
-				can.route.attr('searchTerm', $('.search-input').val());
-				can.route.attr('page', 1);
+				can.route.attr({'searchTerm' : $('.search-input').val(), 'page': 1});
 			},
 			performSearch: function(a) {
 				$('.no-results').addClass('hidden');

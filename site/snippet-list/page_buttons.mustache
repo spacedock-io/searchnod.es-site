@@ -1,5 +1,5 @@
 <div class="pages">
   {{#each pages}}
-  <div class="page-button" can-click="loadPage">{{.}}</div>
+  <div class="page-button"><a href="#!{{searchTerm}}/{{.}}">{{.}}</a></div>
   {{/each}}
 </div>

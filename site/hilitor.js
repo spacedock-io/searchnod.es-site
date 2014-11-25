@@ -37,12 +37,17 @@ function(){
 
     this.setRegex = function(input)
     {
-
       input = input.replace(/^[^\w]+|[^\w]+$/g, "").replace(/[^\w'-]+/g, "|");
-      var re = "(" + input + ")";
-      if(!this.openLeft) re = "\\b" + re;
-      if(!this.openRight) re = re + "\\b";
-      matchRegex = new RegExp(re, "i");
+      // This is a stupid hack for issue #34
+      // https://github.com/spacedock-io/searchnod.es-site/issues/34
+      if (!input.match(/\w/)) {
+        input = '';
+      } else {
+        var re = "(" + input + ")";
+        if(!this.openLeft) re = "\\b" + re;
+        if(!this.openRight) re = re + "\\b";
+        matchRegex = new RegExp(re, "i");
+      }
     };
 
     this.getRegex = function()

@@ -24,7 +24,7 @@ steal(
 
 				can.route.attr({ searchTerm: searchTerm });
 				var page = parseInt(can.route.attr('page'), 10) - 1 || 0;
-				console.log('from:', page*resultsPerPage);
+				
 				snippetList.findAll({
 					searchTerm: searchTerm,
 					from: page*resultsPerPage || 0,

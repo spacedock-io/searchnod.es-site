@@ -23,7 +23,7 @@ steal(
 				var searchTerm = searchInput.val();
 
 				can.route.attr({ searchTerm: searchTerm });
-				var page = parseInt(can.route.attr('page'), 10) -1 || 0;
+				var page = parseInt(can.route.attr('page'), 10) - 1 || 0;
 				console.log('from:', page*resultsPerPage);
 				snippetList.findAll({
 					searchTerm: searchTerm,
@@ -68,10 +68,8 @@ steal(
 		});
 
 		$(document).on('perform-search', function(ev, data) {
-			//if ($('.search-input').val() !== data.searchTerm) {
 				$('.search-input').val(data.searchTerm);
 				snippetBox.attr('performSearch')();
-			//}
 		});
 
 		$().ready(function(){

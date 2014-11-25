@@ -1,10 +1,11 @@
 steal(
 	'can',
 	'./home/home.js',
+	'./snippet-list/page_buttons.js',
 	'./snippet-list/snippet-list.js',
 	'./hilitor.js',
 	'./router.js',
-	function(can, home, snippetList, Hilitor) {
+	function(can, home, pageButtons, snippetList, Hilitor) {
 		var resultsPerPage = steal.config('resultsPerPage');
 
 		var $ = can.$;
@@ -27,6 +28,11 @@ steal(
 					size: resultsPerPage
 				}).then(
 					function(data) {
+						var pages = [];
+						for (var i= 0, l = ~~(data.total/resultsPerPage)+1; i<l; i++) {
+							pages.push(i+1);
+						}
+						pageButtons.attr(pages);
 						snippetBox.attr('snippets', data);
 					},
 					function() {

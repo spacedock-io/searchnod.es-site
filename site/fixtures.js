@@ -2,7 +2,7 @@ steal(
   'can/util/fixture',
   function(fixture) {
     var fixObject = {};
-    fixObject["POST " + steal.config('apiLocation') + "/search?q={searchTerm}"] = function(request, response) {
+    fixObject["POST " + steal.config('apiLocation') + "/search?q={searchTerm}&from={from}&size={size}"] = function(request, response) {
       response({
         "hits": {
           "total": 228,

@@ -1,5 +1,0 @@
-<div class="pages">
-  {{#each page}}
-  <div class="page-button" can-click="loadPage">{{.}}</div>
-  {{/each}}
-</div>

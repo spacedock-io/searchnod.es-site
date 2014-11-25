@@ -11,8 +11,9 @@ steal(
 		var $ = can.$;
 		var snippetBox = new can.Map({
 			snippets: [],
-			doSearch: function(){
+			doSearch: function() {
 				can.route.attr('searchTerm', $('.search-input').val());
+				can.route.attr('page', 1);
 			},
 			performSearch: function(a) {
 				$('.no-results').addClass('hidden');
@@ -24,7 +25,7 @@ steal(
 
 				can.route.attr({ searchTerm: searchTerm });
 				var page = parseInt(can.route.attr('page'), 10) - 1 || 0;
-				
+
 				snippetList.findAll({
 					searchTerm: searchTerm,
 					from: page*resultsPerPage || 0,

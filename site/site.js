@@ -68,8 +68,8 @@ steal(
 		});
 
 		$(document).on('perform-search', function(ev, data) {
-				$('.search-input').val(data.searchTerm);
-				snippetBox.attr('performSearch')();
+			$('.search-input').val(data.searchTerm);
+			snippetBox.attr('performSearch')();
 		});
 
 		$().ready(function(){

@@ -50,6 +50,7 @@ small.examples {
 .snippet-container {
   margin-top: 0px;
   text-align: left;
+  padding-top: 20px;
 }
 
 .footer {
@@ -65,6 +66,10 @@ small.examples {
   font-size: 14px;
 }
 
+.package-description:first-of-type {
+  margin-top: 5px;
+}
+
 pre {
   margin: 0 !important;
   white-space: pre-wrap;       /* css-3 */
@@ -72,6 +77,11 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;
+}
+
+small.result-header span{
+  color: #239F46;
+  font-weight: bold;
 }
 
 .spinner {

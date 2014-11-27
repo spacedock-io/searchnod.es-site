@@ -1,4 +1,9 @@
 <div class="snippet-container">
+  {{#if snippets.length}}
+  <small class="result-header">
+    Code results found: <span class="total-number">{{snippets.total}}</span>
+  </small>
+  {{/if}}
   {{#each snippets}}
     <div class="package-description">
       <b>

@@ -19,7 +19,8 @@ steal.config({
     "mustache": "can/view/mustache/system"
   },
   apiLocation: "http://localhost:8009",
-  fixtures: true
+  resultsPerPage: 10,
+  fixtures: false //true
 });
 
 if(steal.config('fixtures')) {

@@ -9,13 +9,13 @@ body {
 }
 
 a:link:hover, a:visited:hover, a:active:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #239F46;
-    font-weight: bold;
+  text-decoration: none;
+  color: #239F46;
+  font-weight: bold;
 }
 
 .container {
@@ -99,8 +99,14 @@ small.result-header span{
   line-height: 25px;
   background-color: #f8f8f8;
   margin: 5px;
+  cursor: pointer;
 }
 
+.pages a:visited {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
 
 .spinner {
   margin: 30px auto 30px auto;

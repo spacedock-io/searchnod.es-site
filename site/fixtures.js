@@ -9,6 +9,15 @@ steal(
           "total": 228,
           "hits": [
             {
+              "package": "czarna-elka-w-koleczku-sie-mieni",
+              "filename": "hwdp/policji.js",
+              "author": "adrian spejson puchacki",
+              "score": 1.2665461,
+              "content": [
+                "!function(a,b){\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(\"jQuery requires a window with a document\");return b(a)}:b(a)}(\"undefined\"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString"
+              ]
+            },
+            {
               "package": "npm",
               "filename": "lib/faq.js",
               "author": "othiym23",

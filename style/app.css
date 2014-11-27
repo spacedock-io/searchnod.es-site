@@ -84,6 +84,24 @@ small.result-header span{
   font-weight: bold;
 }
 
+.pages {
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
+.pages .page-button {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #239F46;
+  text-align: center;
+  line-height: 25px;
+  background-color: #f8f8f8;
+  margin: 5px;
+}
+
+
 .spinner {
   margin: 30px auto 30px auto;
   display: block;

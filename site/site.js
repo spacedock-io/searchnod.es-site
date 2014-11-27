@@ -42,15 +42,8 @@ steal(
 			$('.spinner').addClass('hidden');
 		};
 
-		// XXX: okurwa, coto?
-		var colorTimeout;
 		snippetBox.bind('change', function() {
 			if (snippetBox.snippets.length > 0) {
-				if (colorTimeout) {
-					clearTimeout(colorTimeout);
-					colorTimeout = undefined;
-				}
-
 				Rainbow.color(document, function() {
 					var hilitor = new Hilitor('code');
 					hilitor.setMatchType('open');

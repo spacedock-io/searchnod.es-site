@@ -19,10 +19,11 @@ steal.config({
     "mustache": "can/view/mustache/system"
   },
   apiLocation: "http://localhost:8009",
-  fixtures: false
+  fixtures: false// true
 });
 
 if(steal.config('fixtures')) {
+  console.log("FIXTURES USED");
   System.meta['site/site'] = {
     deps: ['site/fixtures']
   };

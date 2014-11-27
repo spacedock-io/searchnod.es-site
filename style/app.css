@@ -101,12 +101,6 @@ small.result-header span{
   cursor: pointer;
 }
 
-.pages a:visited {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
 .spinner {
   margin: 30px auto 30px auto;
   display: block;

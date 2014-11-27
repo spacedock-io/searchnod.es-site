@@ -30,6 +30,10 @@ steal.config({
     'crypto.randomBytes',
     'lodash OR underscore',
     'package:request crypto'
+  ],
+  taglines: [
+    'Dissecting code on npm, one search at the time',
+    'Code search for npm'
   ]
 });
 

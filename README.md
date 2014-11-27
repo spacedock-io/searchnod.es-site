@@ -11,7 +11,7 @@ build:
 ```
 $ sudo npm install
 $ npm run build
-$ open index.production.html
+$ open dist/index.html
 ```
 
 to use fixtures change `fixtures: false` to `fixtures:true` in `stealconfig.js`

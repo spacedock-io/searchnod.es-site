@@ -126,6 +126,10 @@ small.result-header span{
   color: #333;
 }
 
+.tagline {
+  margin-top: -10px;
+}
+
 .hidden {
   display: none;
 }

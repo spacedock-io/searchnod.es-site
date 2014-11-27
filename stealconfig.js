@@ -25,7 +25,12 @@ steal.config({
   // APP Configuration //
   ///////////////////////
   apiLocation: "http://localhost:8009",
-  resultsPerPage: 10
+  resultsPerPage: 10,
+  exampleSearches: [
+    'crypto.randomBytes',
+    'lodash OR underscore',
+    'package:request crypto'
+  ]
 });
 
 if(steal.config('fixtures')) {

@@ -127,7 +127,8 @@ small.result-header span{
 }
 
 .tagline {
-  margin-top: -10px;
+  margin-top: -20px;
+  margin-left: -180px;
 }
 
 .hidden {

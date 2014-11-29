@@ -18,9 +18,23 @@ steal.config({
   ext: {
     "mustache": "can/view/mustache/system"
   },
+
+  fixtures: false,
+
+  ///////////////////////
+  // APP Configuration //
+  ///////////////////////
   apiLocation: "http://localhost:8009",
   resultsPerPage: 10,
-  fixtures: false //true
+  exampleSearches: [
+    'crypto.randomBytes',
+    'lodash OR underscore',
+    'package:request crypto'
+  ],
+  taglines: [
+    'Dissecting code on npm, one search at the time',
+    'Code search for npm'
+  ]
 });
 
 if(steal.config('fixtures')) {

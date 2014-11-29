@@ -126,6 +126,12 @@ small.result-header span{
   color: #333;
 }
 
+.tagline {
+  margin-top: -20px;
+  margin-left: 130px;
+  text-align: left;
+}
+
 .hidden {
   display: none;
 }

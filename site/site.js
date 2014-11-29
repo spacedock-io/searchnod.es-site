@@ -36,8 +36,28 @@ steal(
 						// mmalecki is sleeping already hue hue hue.
 						pageButtons.splice(0, pageButtons.length);
 						var pages = [];
-						for (var i= 0, l = ~~(data.total/resultsPerPage)+1; i<l; i++) {
-							pages.push(i+1);
+						var currentPage = page+1;
+
+						var totalPages = ~~(data.total/resultsPerPage)+1;
+						if (currentPage > 1) {
+							// show previous page button
+							pages.push({
+								label: '<<',
+								value: currentPage-1
+							});
+						}
+						// current page button
+						pages.push({
+							label: currentPage,
+							value: currentPage
+						});
+
+						if (currentPage < totalPages) {
+							// show previous page button
+							pages.push({
+								label: '>>',
+								value: currentPage+1
+							});
 						}
 						pageButtons.attr(pages);
 						snippetBox.attr('snippets', data);

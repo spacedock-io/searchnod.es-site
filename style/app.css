@@ -98,14 +98,7 @@ small.result-header span{
   text-align: center;
   line-height: 25px;
   background-color: #f8f8f8;
-  margin: 5px;
   cursor: pointer;
-}
-
-.pages a:visited {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
 }
 
 .spinner {
